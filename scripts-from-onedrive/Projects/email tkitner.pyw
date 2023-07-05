@@ -10,9 +10,9 @@ def new_message():
         port = 465
         context = create_default_context()
         with SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-            server.login("9.qk.c.2xmpu@gmail.com", "9.qk.c.2xmpu123")
+            server.login("[YOUR EMAIL]", "[YOUR PASSWORD]")
             try:
-                server.sendmail("9.qk.c.2xmpu@gmail.com", to, message)
+                server.sendmail("[YOUR EMAIL]", to, message)
                 email = """\
                 """
             except SMTPRecipientsRefused:
